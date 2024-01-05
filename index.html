@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pseudo Class & element</title>
+    <style>
+        body{
+            display: flex;
+            justify-content: center; 
+            align-items: center; 
+            height: 100vh;
+            margin: 0;  
+            background-image: url(./bg\ img);
+            background-size: cover; 
+            z-index: 1;  
+                      
+        }
+        .main-checkbox {
+            position: absolute;
+            top:5vh;
+            left:60vh;
+            font-size: x-large;  
+            color: azure;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+
+        .food{
+            border:1px solid black;
+            height:600px;
+            width:900px;
+            position: absolute;
+            top: 10vh;
+            left:-20vh;
+            background-size: cover;  
+            border-radius: 50px;         
+        }
+        .burger:checked~.food{
+            background-image: url(./burger.jpg);            
+        }
+        .pizza:checked~.food{
+            background-image: url(./pizza.jpg);
+        }
+        .pasta:checked~.food{
+            background-image: url(./pasta.jpg);
+        }
+        .frenchfries:checked~.food{
+            background-image: url(./frenchfries.jpg);
+        }
+        .manchuria:checked~.food{
+            background-image: url(./manchuria.jpg);
+        }
+        .sandwich:checked~.food{
+            background-image: url(./sandwich.jpg);
+        }
+       
+        input:checked{
+          height: 20px;
+          width:20px;
+        }
+        label:hover{
+            color: violet;
+        }    
+    </style>
+</head>
+<body>
+    <div class="main-checkbox">
+        <div class="yummy">
+    <input id="burger" class="burger" name="food" type="checkbox"/>
+    <label for="burger">Burger</label>
+    <input id="pizza"class="pizza"  type="checkbox" />
+    <label for="pizza">Pizza</label>
+    <input id="pasta"  class="pasta"  type="checkbox"/>
+    <label for="pasta">Pasta</label>
+    <input id="frenchfries"  class="frenchfries"  type="checkbox"/>
+    <label for="frenchfries">Frenchfries</label>
+    <input id="manchuria"class="manchuria"  type="checkbox"/>
+    <label for="manchuria">Manchuria</label>
+    <input id="sandwich" class="sandwich"  type="checkbox"/>
+    <label for="sandwich">Sandwich</label>
+    <div class=food></div>
+</div>
+</div>
+</body>
+</html>
